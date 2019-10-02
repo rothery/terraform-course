@@ -2,10 +2,10 @@ variable "AWS_REGION" {
   default = "eu-west-1"
 }
 variable "PATH_TO_PRIVATE_KEY" {
-  default = "mykey"
+  default = "sshkeyvpc"
 }
 variable "PATH_TO_PUBLIC_KEY" {
-  default = "mykey.pub"
+  default = "sshkeyvpc.pub"
 }
 variable "AMIS" {
   type = "map"

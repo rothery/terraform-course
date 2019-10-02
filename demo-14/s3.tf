@@ -1,8 +1,8 @@
-resource "aws_s3_bucket" "b" {
-    bucket = "mybucket-c29df1"
+resource "aws_s3_bucket" "versioning_bucket" {
+    bucket = "mybucket123ksdfsk"
     acl = "private"
 
     tags {
-        Name = "mybucket-c29df1"
+        Name = "mybucket123"
     }
 }

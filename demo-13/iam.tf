@@ -8,17 +8,17 @@ resource "aws_iam_policy_attachment" "administrators-attach" {
     policy_arn = "arn:aws:iam::aws:policy/AdministratorAccess"
 }
 # user
-resource "aws_iam_user" "admin1" {
+resource "aws_iam_user" "tfadmin1" {
     name = "admin1"
 }
-resource "aws_iam_user" "admin2" {
+resource "aws_iam_user" "tfadmin2" {
     name = "admin2"
 }
 resource "aws_iam_group_membership" "administrators-users" {
     name = "administrators-users"
     users = [
-        "${aws_iam_user.admin1.name}",
-        "${aws_iam_user.admin2.name}",
+        "${aws_iam_user.tfadmin1.name}",
+        "${aws_iam_user.tfadmin2.name}",
     ]
     group = "${aws_iam_group.administrators.name}"
 }

@@ -21,6 +21,7 @@ resource "aws_route_table" "main-private" {
     }
 }
 # route associations private
+# Remove to remove interweb
 resource "aws_route_table_association" "main-private-1-a" {
     subnet_id = "${aws_subnet.main-private-1.id}"
     route_table_id = "${aws_route_table.main-private.id}"

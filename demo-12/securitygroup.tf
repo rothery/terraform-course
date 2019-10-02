@@ -13,13 +13,12 @@ resource "aws_security_group" "example-instance" {
       from_port = 22
       to_port = 22
       protocol = "tcp"
-      cidr_blocks = ["0.0.0.0/0"]
+      cidr_blocks = ["155.93.180.185/32"]
   } 
 tags {
-    Name = "example-instance"
+    Name = "allow-ssh"
   }
 }
-
 resource "aws_security_group" "allow-mariadb" {
   vpc_id = "${aws_vpc.main.id}"
   name = "allow-mariadb"
@@ -41,4 +40,3 @@ resource "aws_security_group" "allow-mariadb" {
     Name = "allow-mariadb"
   }
 }
-
